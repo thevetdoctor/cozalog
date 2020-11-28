@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Input from './Input';
 import Select from './Select';
 import data from './data.js';
+import './Form.css';
 
 export default function Form() {
+    const [ checked, setChecked ] = useState(false);
 
-    const myOptions = data.split(',').map(x => x.toUpperCase());
-    console.log(myOptions);
+    // const myOptions = data.split(',').map(x => x.toUpperCase());
+    const myOptions = data.split(',');
+    console.log(myOptions.length);
 
     return (
-        <div>
+        <div className='form'>
             <Input
             type='text'
             name='Name'
@@ -23,15 +26,21 @@ export default function Form() {
             <Input
             type='checkbox'
             name='Tick Box (if present)'
-            />           
-            <Input
-            type='radio'
-            name='Male'
+            checked={false}
             />
-            <Input
-            type='radio'
-            name='Female'
-            />
+            <div className='radio'>
+                <Input
+                type='radio'
+                name='Male'
+                value='gender'
+                />
+                <Input
+                type='radio'
+                name='Female'
+                value='gender'
+                />
+            </div>
+            <h3>Please select your unit</h3>    
             <Select options={myOptions} />     
         </div>
     )

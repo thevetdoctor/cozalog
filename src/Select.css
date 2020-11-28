@@ -1,4 +1,6 @@
-select {
+select, option {
     padding: 0.4em;
-    border-radius: .2em;
+    border-radius: .4em;
+    font-size: 1em;
+    margin-top: 1em;
 }
