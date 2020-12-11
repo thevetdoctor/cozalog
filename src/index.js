@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import reducer, { initialState } from "./cozaReducer";
+import { CozaProvider } from "./CozaProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CozaProvider reducer={reducer} initialState={initialState}>
+      <App />
+    </CozaProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

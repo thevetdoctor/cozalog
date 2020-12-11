@@ -1,14 +1,13 @@
 input {
-    border-radius: .4em;
-    font-size: 1.1em;
+    font-size: 1em;
     font-variant: normal;
     margin: .4em;
-    border: .02em solid;
+    border: none;
     padding: 0.4em;
     text-align: justify;
+    border-bottom: 1px solid gray;
 }
 
 input:focus {
-    border: none;
-    /* border: olivedrab; */
+    border-bottom: 1px solid rgb(227, 239, 248);
 }

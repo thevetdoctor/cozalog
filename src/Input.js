@@ -1,49 +1,47 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Input.css';
+import { useCozaState } from './CozaProvider';
 
 
 export default function Input(props) {
     const [ name, setName ] = useState('');
+    const [{ stateData }, dispatch] = useCozaState();
     const [ checked, setChecked ] = useState(false);
     const nameRef = useRef();
 
     useEffect(() => {
-        console.log(nameRef.current.value);
+        console.log(name);
+        console.log(nameRef.current.value, checked, stateData);
         // nameRef.current.focus();
-        // nameRef.current.value = name;
+        nameRef.current.value = name;
+        setName(name);
     }, [name]);
-const handleChange = (e) => {
-    let { value, type } = e.target;
-    console.log(value, type);
-    if(type === 'checkbox') {
-        value = e.target.checked;
-        setName(value);
-        setChecked(!checked);
-    }
-    setName(value);
-}
+
+    const handleInputChange = (e) => {
+                const target = e.target;
+                const value = target.type === 'radio' ? target.checked : target.value;
+                // const value = target.type === 'checkbox' ? target.checked : target.value;
+                const name = target.name;
+            
+                console.log(target.type, name, value, target.value);
+                if(checked) setChecked(true);
+                dispatch({
+                    type: 'ADD_DATA',
+                    data: 'oo'
+                });
+              } 
 
     return (
         <div>
-            {(props.type && ((props.type === 'text') || (props.type === 'email'))) &&
-            (<div>
-                <label>
-                    {props.name}
-                </label>
-            </div>)}
             <input
             type={props.type}
             name={props.name}
             ref={nameRef}
             placeholder={props.placeholder}
-            onChange={handleChange}
-            checked={checked}
+            onChange={handleInputChange}
+            checked={props.checked}
             required
             />
-            {(props.type && ((props.type !== 'text') && (props.type !== 'email'))) &&
-            (<label>
-                {props.name}
-            </label>)}
         </div>
     )
 }

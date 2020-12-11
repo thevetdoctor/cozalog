@@ -1,0 +1,24 @@
+.radio {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+}
+
+.input_section {
+    background-color: #fff;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 0.3em;
+    color: #000;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
