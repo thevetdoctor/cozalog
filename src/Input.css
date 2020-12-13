@@ -1,13 +1,13 @@
 input {
-    font-size: 1em;
-    font-variant: normal;
+    width: 100%;
+    font-size: 0.9em;
     margin: .4em;
     border: none;
-    padding: 0.4em;
-    text-align: justify;
+    /* padding: 0.4em; */
     border-bottom: 1px solid gray;
 }
 
 input:focus {
+    border: none;
     border-bottom: 1px solid rgb(227, 239, 248);
 }

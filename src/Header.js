@@ -7,9 +7,11 @@ export default function Header() {
            <h3>
              Welcome to COZA
             </h3>
-            <p>We love and celebrate you</p>
-            <p>Message by: Pastor Ken Habuhrajan</p>
-            <Link to='/form'>
+            <p>We love and celebrate you</p><br />
+            <> Pastor Ken Habuhrajan</><br /><br />
+            <>{new Date().toLocaleString()}</>
+            <br /><br />
+            <Link to='/profile'>
                 Enter
             </Link>
         </div>

@@ -1,6 +1,8 @@
 select, option {
+    width: max-content;
     padding: 0.3em;
-    border-radius: .3em;
-    font-size: 0.9em;
+    /* border-radius: .3em; */
+    font-size: 0.8em;
     border: none;
+    border-bottom: 1px solid gray;
 }

@@ -5,11 +5,8 @@ import './NavBar.css';
 export default function NavBar() {
     return (
         <div>
-           <h3>
-             Welcome to COZA
-            </h3>
             <Link to='/'>
-                Home
+            COZA ILORIN MID-WEEK SERVICE REPORT
             </Link>
         </div>
     )

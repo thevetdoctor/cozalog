@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Input from './Input';
 import Select from './Select';
 import data from './data.js';
@@ -10,10 +10,17 @@ export default function Profile() {
     const [{ stateData }, dispatch] = useCozaState();
 
     const myOptions = data.split(',').map(x => x.toUpperCase());
+    const gender = ['Male', 'Female'];
 
     useEffect(() => {
-        console.log(stateData);
+        const addData = () =>
+        dispatch({
+            type: 'ADD_DEPARTMENTS',
+            departments: myOptions
+        });
+        addData();
     }, []);
+    console.log(stateData);
 
       return (
         <div className='form'>
@@ -38,26 +45,27 @@ export default function Profile() {
                 placeholder='Enter your email'
                 />           
             </div>
+          
+            <div className='input_section'>
+                <label>Birthdate</label>
+                <Input
+                type='date'
+                name='birthdate'
+                />           
+            </div>
             
             <div className='input_section'>
-                <div className='radio'>
-                    <label>Male</label>
-                    <Input
-                    type='radio'
-                    name='gender'
-                    defaultValue='Male'
-                    />
-                    <label>Female</label>
-                    <Input
-                    type='radio'
-                    name='gender'
-                    defaultValue='Female'
-                    />
-                </div>
+            <label>Gender</label>    
+                <Select 
+                name='gender'
+                options={gender} />
             </div>
+
             <div className='input_section'>
-                <p>Choose your Department</p>    
-                <Select options={myOptions} />
+                <label>Choose your Department</label>    
+                <Select 
+                name='department'
+                options={stateData.departments} />
             </div>
         </div>
     )
