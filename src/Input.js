@@ -11,7 +11,7 @@ export default function Input(props) {
                 const name = target.name;
                 const value = target.value;
             
-                // console.log(name, value);
+                console.log(name, value);
                 dispatch({
                     type: `ADD_${name.toUpperCase()}`,
                     data: value
@@ -19,17 +19,24 @@ export default function Input(props) {
               } 
 
     return (
-        <div>
+        <div className='input_section'>
             {/* {stateData[props.name] === '' ?  */}
+            {/* <div className='input_section'> */}
+            <label>{props.label}</label>
             <input
             type={props.type}
             name={props.name}
+            value={props.value}
+            pattern={props.pattern}
+            maxLength={props.maxLength}
             placeholder={props.placeholder}
             onChange={handleInputChange}
             required
             />
+            <span style={{ marginTop: '0.7em', display: 'inline'}}>{props.tag}</span>
             {/* : */}
             {/* <p>{stateData[props.name]}</p>} */}
+        {/* </div> */}
         </div>
     )
 }

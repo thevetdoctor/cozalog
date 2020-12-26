@@ -1,16 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import BackButton from './BackButton';
+import { Button } from './Buttons';
 import './FooterNav.css';
 
-export default function NavBar(props) {
+export default function FooterNav(props) {
+
     return (
         <div className='footer_nav'>
-            <Link to={props.back}>
-                {props.backTag}
-            </Link>
-            <Link to={props.next}>
-                {props.nextTag}
-            </Link>
+            <Button
+            classname='prev'
+            name={props.prevName}
+            url={props.prevUrl} 
+            onClick={props.prevOnClick}
+            />
+            <Button 
+            classname='next'
+            name={props.nextName}
+            url={props.nextUrl} 
+            onClick={props.nextOnClick}
+            disabled={props.disabled}
+            />
         </div>
     )
 }

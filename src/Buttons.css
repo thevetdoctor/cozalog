@@ -1,0 +1,43 @@
+button {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    background-color: hotpink;
+}
+
+.prev:hover {
+    background-color: indianred;
+}
+
+.next {
+    background-color: lawngreen;
+}
+
+.next:hover {
+    background-color: lightseagreen;
+}
+
+.plain {
+    background-color: #5b85aa;
+}
+
+.plain:hover {
+    background-color: cadetblue;
+}
+
+button[disabled] {
+    background-color: gray;
+}
+
+button[disabled]:hover {
+    background-color: gray;
+}

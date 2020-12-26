@@ -1,3 +1,6 @@
-const data =  "academic & communion,avalanche,altar management,bus & traffic,child care,church office,coza experience,coza outreach,facility maintenance,hosts & hostesses,pastoral care,protocol,public relations,sparkles,special duties,special mums outreach,sounds,training & quality control,ushering,welfare,word factory,marriage counselling,media";
+const data =  [", academic & communion,avalanche,altar management,bus & traffic,child care,church office,coza experience,coza outreach,facility maintenance,hosts & hostesses,pastoral care,protocol,public relations,sparkles,special duties,special mums outreach,sounds,training & quality control,ushering,welfare,word factory,marriage counselling,media",
+",altar management, drama, media, sounds and equipment, photismos, witty inventions, pastoral care unit (PCU), public relations unit (PRU), word factory, coza internship, coza xperience, ushery board, hosts and hostesses, protocol, digital surveillance & security, coza transfer services, coza corporate, security & traffic, children ministry, welfare & special needs services, sparkles, monitoring & evaluation, quality control, family process unit, programme coordinators, others",
+"avalanche 1 & 2,bus & traffic,child care,coza experience,coza outreach,facility maintenance,hosts & hostesses,pastoral care unit,protocol,public relations unit,sparkles,special duties,sounds,training & quality control,ushering,welfare,word factory,marriage counselling,academic & communion,media,church office,special mums outreach"];
+
 
 export default data;

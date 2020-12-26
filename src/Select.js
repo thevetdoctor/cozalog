@@ -11,7 +11,7 @@ export default function Select(props) {
         const name = target.name;
         const value = target.value;
     
-        // console.log(name, value);
+        console.log(name, value);
         dispatch({
             type: `ADD_${name.toUpperCase()}`,
             data: value
@@ -19,10 +19,12 @@ export default function Select(props) {
       } 
 
     return (
-        <div>
+        <div className='input_section'>
             {/* {stateData[props.name] === '' ?  */}
+            <label>{props.label}</label>
             <select 
             name={props.name}
+            value={props.value}
             onChange={handleInputChange}
             >
                 {props.options.map((item, idx) => (

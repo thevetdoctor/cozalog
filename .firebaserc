@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "oba-dce9d"
+  },
+  "targets": {
+    "oba-dce9d": {
+      "hosting": {
+        "coza": [
+          "coz-cb4b8"
+        ]
+      }
+    }
+  }
+}

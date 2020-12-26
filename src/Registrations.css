@@ -1,0 +1,13 @@
+.registration_div {
+    background-color: teal;
+    padding: 1em;
+    margin: 0.5em auto;
+    border-radius: 0.5em;
+    color: #fff;
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    font-size: 0.8em;
+    line-height: 1.5;
+}

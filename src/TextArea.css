@@ -1,0 +1,26 @@
+textarea {
+    width: 100%;
+    font-size: 0.9em;
+    /* margin: .4em; */
+    border: none;
+    /* padding: 0.4em; */
+    border-bottom: 1px solid gray;
+}
+
+textarea:focus {
+    border: none;
+    border-bottom: 1px solid rgb(227, 239, 248);
+}
+
+.input_section {
+    background-color: #fff;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 0.3em;
+    color: #000;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+}
