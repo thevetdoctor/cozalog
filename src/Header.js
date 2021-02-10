@@ -114,7 +114,7 @@ export default function Header() {
            <DateComponent />
             <br /><br />
             <p>Are you a worker ?</p>
-            <br /><br />
+            <br />
             {/* <Link to={login}>
                 {!user ? 
                 <span>
