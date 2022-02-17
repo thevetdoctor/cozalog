@@ -15,6 +15,7 @@ import { auth } from "./firebase";
 import { useCozaState } from './CozaProvider';
 import ImageUpload from './ImageUpload';
 import Register from './Register';
+import Paystack from './Paystack';
 import NotFound from './NotFound';
 
 function App() {
@@ -73,6 +74,9 @@ function App() {
           </Route>
           <Route path='/postservice'>
             <PostService />
+          </Route>
+          <Route path='/paystack'>
+            <Paystack />
           </Route>
           <Route>
             <NotFound />
